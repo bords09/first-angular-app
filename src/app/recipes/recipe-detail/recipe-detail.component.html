@@ -1,1 +1,24 @@
-<p>recipe-detail works!</p>
+<div class="card h-100">
+  <div class="card m-1 p-2 bg-secondary h-100">
+    <h1>
+      {{ recipeInfo.name }}
+    </h1>
+    <div class="dropdown btn-block">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" 
+      aria-expanded="false"
+      appDropdown>
+        Manage Recipe
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <img src="{{ recipeInfo.imagePath }}" alt="{{ recipeInfo.name }}" class="card-img-top p-1 img-fluid">
+      <p class="card-text">{{ recipeInfo.description }}</p>
+  </div>
+  </div>
+  
+</div>

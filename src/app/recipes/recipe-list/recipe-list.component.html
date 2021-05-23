@@ -1,1 +1,10 @@
-<app-recipe-item></app-recipe-item>
+<div class="card bg-light border-light">
+    <button class="btn btn-dark btn-lg m-1">New Recipe</button>
+    <div class="card-group mx-1 mb-1">
+        <app-recipe-item 
+        *ngFor="let recipeEl of recipeList"
+        [recipe]="recipeEl"
+        (selectRecipe)="onRecipeSelected($event)"
+        ></app-recipe-item>
+    </div>
+</div>
